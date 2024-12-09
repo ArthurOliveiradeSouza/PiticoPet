@@ -1,0 +1,549 @@
+@charset "UTF-8";
+
+/*==============RESET===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*============== rolagem suave ============== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*============Variaveis=============*/
+
+:root {
+    --verde: #4DBF49;
+    --verdeclaro: #9DBF69;
+    --roxo: #7C15AF;
+    --azul: #A1DCE9;
+    --branco: #FFFAF0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/*============Barra inicial=============*/
+
+header{
+
+background-color: var(--branco);  
+width: 100% ; 
+margin: auto; 
+position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+/* Parte de cima do header */
+
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+/* Logo */
+
+.logo img {
+    height: 100px; 
+    width: 250px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* Container da barra de pesquisa */
+
+.search-container {
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    margin: 0 0px;
+}
+
+.search-container input {
+    width: 100%; 
+    padding: 15px; 
+    border: none; 
+    border-radius: 15px; 
+    background-color: #d3d3d3; 
+    margin-right: 5px; 
+}
+
+
+.search-container .search-icon img {
+    width: 30px; 
+    height: 30px;
+    cursor: pointer; 
+}
+
+.search-container .search-icon img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Ícones */
+.icons {
+    display: flex; 
+    align-items: center;
+}
+
+.icons .icon {
+    margin-left: 20px; 
+    display: flex;
+    align-items: center; 
+    transition: transform 0.3s; 
+}
+
+.icons .icon:hover {
+    transform: scale(1.1);
+}
+
+.icons span {
+    margin-left: 10%; 
+}
+
+.icons img {
+    width: 50px; 
+    height: 50px; 
+}
+
+.icons a{
+    text-decoration: none;
+    color:#000000
+}
+
+
+/* Linha de baixo do cabeçalho */
+
+.bottom-header {
+    background-color: var(--roxo); 
+    padding: 1.3% 0%; 
+    position: relative;
+}
+
+.bottom-header ul {
+    display: flex; 
+    justify-content: center;
+    list-style: none; 
+}
+
+.bottom-header li {
+    margin: 0% 2.5%; 
+    position: relative;
+}
+
+
+.bottom-header a {
+    text-decoration: none;
+    color: var(--branco); 
+    font-weight: bold; 
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+
+.bottom-header a:hover {
+    color: #c0c0c0; 
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.bottom-header a:hover::after {
+    content: ''; /* Cria um pseudo-elemento */
+    display: block;
+    width: 100%;
+    height: 2px; 
+    background-color: #c0c0c0; 
+    position: absolute;
+    bottom: -5px; 
+    left: 0; 
+}
+
+
+
+/*============Main=============*/
+
+
+main{
+    height: auto;  
+    width: auto; 
+    box-sizing: border-box; 
+
+    h1, h2{
+        color: #333333;
+    }
+    p {
+        color: #333333;
+        font-size: 22px;
+        text-align: justify;
+        margin-bottom: 15px;
+        padding: 20px;
+    }
+    
+}
+
+/*======Sobre======*/
+
+#pitico-pet-sobre {
+    display: flex;
+    align-items: center;
+    padding: 40px; 
+    gap: 10px; 
+}
+
+#pitico-pet-sobre figure {
+    margin: 0;
+}
+
+#pitico-pet-sobre .img-pets {
+    width: 500px;
+    border-radius: 10px; 
+
+}
+
+#pitico-pet-sobre .text-container {
+    flex-grow: 1; 
+}
+
+#pitico-pet-sobre h1 {
+    margin: 0 0 5px 0; 
+    font-family: "Modak", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 70px;
+    color: var(--verdeclaro);
+    align-items: center;
+}
+
+#pitico-pet-sobre p {
+    margin: 0; 
+    font-size: 25px;
+}
+
+/* Seção Nosso Petshop */
+
+.outrasfotos {
+    background-color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.outrasfotos h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-top: 1px solid #333333;
+    padding-top: 20px;
+
+    font-family: "Modak", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 70px;
+    color: var(--verdeclaro);
+}
+
+.outrasfotos ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.outrasfotos li {
+    list-style: none;
+    flex: 1;
+}
+
+.outrasfotos img {
+    width: 100%;
+    width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.outrasfotos img:hover {
+    transform: scale(1.05);
+}
+
+/* Seção Nossa História */
+
+
+.historia {
+    border-top: 2px solid #333333;
+   padding-top: 50px;
+    background-color: white;
+    text-align: center;
+    border-bottom: 2px solid #333333;
+}
+
+.historia h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+
+    font-family: "Modak", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 70px;
+    color: var(--verdeclaro);
+}
+
+.historia img {
+    width: 50%;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.historia p {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 40px 80px;
+    margin: 0 auto;
+}
+
+/*=====NOSSO PESSOAL========*/
+
+.nos {
+    text-align: center;
+    padding: 20px;
+}
+
+.nos ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nos .pessoa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nos img {
+    width: 150px; /* Tamanho desejado da imagem */
+    height: 150px; /* Tamanho desejado da imagem */
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc; /* Pode ajustar a borda conforme desejado */
+}
+
+.nos p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nos h1{
+    font-family: "Modak", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 70px;
+    color: var(--verdeclaro);
+    padding: 20px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--roxo);
+    border-top: 1px solid #000000;
+}
+
+.direito {
+    display: flex;
+    align-items: center;
+}
+
+.direito img {
+    margin-right: 10px;
+    width: 30px; 
+    height: 30px; 
+}
+
+.voltar {
+    text-align: center;
+}
+
+.voltar a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+}
+
+.voltar a:hover {
+    color: var(--verdeclaro);
+}
+
+.mapaeemail {
+    display: flex;
+    gap: 30px;
+}
+
+.mapaeemail a {
+    display: flex;
+    align-items: center;
+}
+
+.mapaeemail img {
+    width: 30px; 
+    height: 30px;
+}
+
+/*============= Ajustes =============*/
+
+@media (max-width: 768px) {
+    .top-header {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+
+    .bottom-header ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .bottom-header li {
+        margin: 10px 0;
+    }
+
+    #produtos, .serviços {
+        flex-direction: column;
+    }
+
+    .produto-box, .service-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .bottom-header ul {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        width: 100%;
+        height: 200px;
+    }
+
+    .slides img {
+        width: 100%;
+    }
+
+    .Rodapé {
+        flex-direction: column;
+    }
+}
+
+.outrasfotos-responsiva{
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0;
+    display: flex; /* Faz a lista ser flexível */
+    justify-content: space-around; /* Distribui os itens uniformemente */
+}
+
+.outrasfotos-responsiva li {
+    margin: 10px; /* Espaço entre os itens */
+}
+
+@media (max-width: 1000px) {
+    .outrasfotos-responsiva {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+
+#pitico-pet-sobre{
+    padding: 0;
+    display: flex; 
+    justify-content: space-around;  
+    margin: 10px;
+}
+
+@media (max-width: 1000px) {
+    #pitico-pet-sobre {
+        flex-direction: column; /* coluna */
+        align-items: center; /* centralizando itens */
+    }
+
+
+
+
+}
+
+
+
+/* Estilo do Menu Hambúrguer */
+.menu-toggle {
+    display: none; /* Esconde por padrão */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 4px;
+    background: var(--roxo);
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Para telas menores */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Mostra o menu hambúrguer */
+    }
+
+    .bottom-header {
+        display: none; /* Esconde o menu completo */
+    }
+}
+
+

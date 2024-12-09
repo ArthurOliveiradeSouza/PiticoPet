@@ -1,0 +1,447 @@
+@charset "UTF-8";
+
+/*==============RESET===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    
+ul {
+    list-style: none;
+  }
+    
+a {
+    text-decoration: none;
+  }
+    
+img {
+    width: 100%;
+    height: auto;
+  }
+
+/*============== rolagem suave ============== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*============Variaveis=============*/
+
+:root {
+    --verde: #4DBF49;
+    --verdeclaro: #9DBF69;
+    --roxo: #7C15AF;
+    --azul: #A1DCE9;
+    --branco: #FFFAF0;
+}
+
+body{
+    margin: 0;
+     font-family: Arial, sans-serif; 
+}
+
+
+/*============Barra inicial=============*/
+
+header{
+
+background-color: var(--branco);  
+width: 100% ; 
+margin: auto; 
+position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+/* Parte de cima do header */
+
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+/* Logo */
+
+.logo img {
+    height: 100px; 
+    width: 250px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* Container da barra de pesquisa */
+
+.search-container {
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    margin: 0 0px;
+}
+
+.search-container input {
+    width: 100%; 
+    padding: 15px; 
+    border: none; 
+    border-radius: 15px; 
+    background-color: #d3d3d3; 
+    margin-right: 5px; 
+}
+
+
+.search-container .search-icon img {
+    width: 30px; 
+    height: 30px;
+    cursor: pointer; 
+}
+
+.search-container .search-icon img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Ícones */
+.icons {
+    display: flex; /* alinhar */
+    align-items: center;
+}
+
+.icons .icon {
+    margin-left: 20px; 
+    display: flex;
+    align-items: center; 
+    transition: transform 0.3s; 
+}
+
+.icons .icon:hover {
+    transform: scale(1.1);
+}
+
+.icons span {
+    margin-left: 10%; /* Espaçamento entre o ícone e o texto */
+}
+
+.icons img {
+    width: 50px; 
+    height: 50px; 
+}
+
+.icons a{
+    text-decoration: none;
+    color:#000000
+}
+
+
+/* Linha de baixo do cabeçalho */
+
+.bottom-header {
+    background-color: var(--roxo); 
+    padding: 1.3% 0%; 
+    position: relative;
+}
+
+.bottom-header ul {
+    display: flex; 
+    justify-content: center;
+    list-style: none; 
+}
+
+.bottom-header li {
+    margin: 0% 2.5%; 
+    position: relative;
+}
+
+
+.bottom-header a {
+    text-decoration: none;
+    color: var(--branco); 
+    font-weight: bold; 
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+
+.bottom-header a:hover {
+    color: #c0c0c0; 
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.bottom-header a:hover::after {
+    content: ''; /* Cria um pseudo-elemento */
+    display: block;
+    width: 100%;
+    height: 2px; 
+    background-color: #c0c0c0; 
+    position: absolute;
+    bottom: -5px; 
+    left: 0; 
+}
+
+
+
+/*============Main=============*/
+
+
+main{
+    background-color:  var(--branco); 
+    height: auto;  
+    width: auto; 
+    box-sizing: border-box; 
+    margin-bottom: 30px;
+    p {
+        color: #333333;
+        font-size: 22px;
+        text-align: justify;
+        margin-bottom: 15px;
+        padding: 20px;
+    }
+    
+    p a {
+        color: var(--verde);
+        text-decoration: underline;
+    }
+    
+    p strong {
+        color: var(--verdeclaro);
+    }
+
+    a {
+        color: var(--verdeclaro);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    
+    a:hover {
+        color: var(--verdeclaro);
+    }
+    
+}
+
+/*=============Serviços=============*/
+
+.adestramento {
+    text-align: center;
+    padding-top: 7%;
+    border-bottom: 10px solid var(--roxo);
+    padding-bottom: 50px;
+}
+
+.adestramento h3{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.adestramento h1{
+    font-family: "Modak", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 70px;
+    color: var(--verdeclaro);
+}
+
+
+video{
+    float: right;
+    padding-top: 0%;
+    padding-right: 2%;
+    padding-left: 3%;
+    width: 50%;
+    height: 50%;
+    border-radius: 10%;
+}
+
+.beneficioseservicos{
+    padding-top: 5%;
+    font-size: 15px;
+}
+
+
+.beneficioseservicos h2{
+    padding-bottom: 15px;
+}
+
+.beneficioseservicos li{
+    padding-left: 2px;
+    font-size: 20px;
+    left: 70px;
+}
+
+.beneficioseservicos ul li{
+    position: relative;
+    padding-left: 40px; 
+}
+
+.beneficioseservicos ul li::before{
+    content: '';
+    background-image: url('../img/certo.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    position: absolute;
+    left: 480px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; 
+    height: 30px; 
+}
+
+.adestramentocachorro {
+    float: left; 
+    margin-right: 15px; 
+    margin-left: 15px;
+    margin-top: 0%;
+    width: 500px;
+    height: 600px;
+    border-radius: 5%;
+}
+
+/*=============Serviços=============*/
+
+.serviços{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.serviços  a {
+ text-decoration: none;
+ color: #000000;
+}
+
+.serviços span{
+   border-bottom: 2px solid var(--roxo);
+   
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+.serviços .image-servicos{
+    height: 200px;
+    width: 200px;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+
+.Conhecaoutros {
+  padding-top: 130px;
+}
+
+
+
+/*=============Rodapé=============*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--roxo);
+    border-top: 1px solid #000000;
+}
+
+.direito {
+    display: flex;
+    align-items: center;
+}
+
+.direito img {
+    margin-right: 10px;
+    width: 30px; 
+    height: 30px; 
+}
+
+.voltar {
+    text-align: center;
+}
+
+.voltar a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+}
+
+.voltar a:hover {
+    color: var(--verdeclaro);
+}
+
+.mapaeemail {
+    display: flex;
+    gap: 30px;
+}
+
+.mapaeemail a {
+    display: flex;
+    align-items: center;
+}
+
+.mapaeemail img {
+    width: 30px; 
+    height: 30px;
+}
+
+/*============= Ajustes =============*/
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+       
+    }
+}
+
+/* Estilo do Menu Hambúrguer */
+.menu-toggle {
+    display: none; /* Esconde por padrão */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 4px;
+    background: var(--roxo);
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Para telas menores */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Mostra o menu hambúrguer */
+    }
+
+    .bottom-header {
+        display: none; /* Esconde o menu completo */
+    }
+}
+
+
+

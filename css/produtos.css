@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+/*==============RESET===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+  }
+    
+ul {
+    list-style: none;
+  }
+    
+a {
+    text-decoration: none;
+  }
+    
+img {
+    width: 100%;
+    height: auto;
+  }
+
+/*============== rolagem suave ============== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+:root {
+    --verde: #4DBF49;
+    --verdeclaro: #9DBF69;
+    --roxo: #7C15AF;
+    --azul: #A1DCE9;
+    --branco: #FFFAF0;
+}
+
+body {
+    background-color: var(--branco);
+}
+
+/*============Barra inicial=============*/
+
+header{
+
+    background-color: var(--branco);  
+    width: 100% ; 
+    margin: auto; 
+    position: sticky;
+        top: 0;
+        z-index: 1000; 
+    }
+    
+    /* Parte de cima do header */
+    
+    .top-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+    
+    /* Logo */
+    
+    .logo img {
+        height: 100px; 
+        width: 250px;
+    }
+    
+    .logo img:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+    
+    /* Container da barra de pesquisa */
+    
+    .search-container {
+        flex-grow: 1; 
+        display: flex;
+        align-items: center;
+        margin: 0 0px;
+    }
+    
+    .search-container input {
+        width: 100%; 
+        padding: 15px; 
+        border: none; 
+        border-radius: 15px; 
+        background-color: #d3d3d3; 
+        margin-right: 5px; 
+    }
+    
+    
+    .search-container .search-icon img {
+        width: 30px; 
+        height: 30px;
+        cursor: pointer; 
+    }
+    
+    .search-container .search-icon img:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    /* Ícones */
+    .icons {
+        display: flex; 
+        align-items: center;
+    }
+    
+    .icons .icon {
+        margin-left: 20px; 
+        display: flex;
+        align-items: center; 
+        transition: transform 0.3s; 
+    }
+    
+    .icons .icon:hover {
+        transform: scale(1.1);
+    }
+    
+    .icons span {
+        margin-left: 10%; 
+    }
+    
+    .icons img {
+        width: 50px; 
+        height: 50px; 
+    }
+    
+    .icons a{
+        text-decoration: none;
+        color:#000000
+    }
+    
+    
+    /* Linha de baixo do cabeçalho */
+    
+    .bottom-header {
+        background-color: var(--roxo); 
+        padding: 1.3% 0%; 
+        position: relative;
+    }
+    
+    .bottom-header ul {
+        display: flex; 
+        justify-content: center;
+        list-style: none; 
+    }
+    
+    .bottom-header li {
+        margin: 0% 2.5%; 
+        position: relative;
+    }
+    
+    
+    .bottom-header a {
+        text-decoration: none;
+        color: var(--branco); 
+        font-weight: bold; 
+        transition: color 0.2s ease, text-shadow 0.2s ease;
+    }
+    
+    /* Efeito ao passar o mouse */
+    
+    .bottom-header a:hover {
+        color: #c0c0c0; 
+        font-size: 20px;
+        transition: 0.3s;
+    }
+    
+    .bottom-header a:hover::after {
+        content: ''; /* Cria um pseudo-elemento */
+        display: block;
+        width: 100%;
+        height: 2px; 
+        background-color: #c0c0c0; 
+        position: absolute;
+        bottom: -5px; 
+        left: 0; 
+    }
+
+    /*==========MAIN===========*/
+
+.produtos-container {
+    display: flex;             /* Usando flexbox para o container de produtos */
+    flex-wrap: wrap;          /* Permite que os produtos quebrem para a próxima linha */
+    justify-content: space-between; /* Espaçamento igual entre todos os produtos */
+    max-width: 1200px;        /* Largura máxima do container */
+    margin: 0 auto;           /* Centraliza o container */
+
+}
+
+.produtos-container a {
+    text-decoration: none;
+    color: white;
+    display: flex;            /* Flexbox para alinhar imagem e texto horizontalmente */
+    flex-direction: column;   /* Organizar os itens um embaixo do outro na caixa */
+    align-items: center;      
+    margin: 5px;             
+    padding: 5px;
+    font-family: Arial, sans-serif; 
+    border-radius: 15px;
+    border: 2px solid black;  /* Borda em volta da caixa do produto */
+    background-color: var(--roxo); 
+    width: calc(25% - 10px);  /* Define a largura das caixas (quatro por linha - os cantos) */
+    box-sizing: border-box;    /* Inclui padding e border no cálculo da largura */
+}
+
+img {
+    width: 100%;              /* Imagem ocupa 100% da largura da caixa */
+    border-radius: 15%; 
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: var(--roxo);
+    font-weight: bold;
+}
+
+.produtos-container a:hover {
+    font-size: 18px;
+    transition-duration: .25s;
+}
+
+.Areia, .Brinquedo, .Cama, .Coleira, .Perfume, .Pote, .Racao, .Roupa {
+    margin: 5px 0;          
+    text-align: center;       
+}
+
+.produtos-container nav a{
+    text-align: end;
+    background-color: var(--verde);
+    color: black;
+}
+
+/*=============Rodapé=============*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--roxo);
+    border-top: 1px solid #000000;
+}
+
+.direito {
+    display: flex;
+    align-items: center;
+}
+
+.direito img {
+    margin-right: 10px;
+    width: 30px; 
+    height: 30px; 
+}
+
+.voltar {
+    text-align: center;
+}
+
+.voltar a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+}
+
+.voltar a:hover {
+    color: var(--verdeclaro);
+}
+
+.mapaeemail {
+    display: flex;
+    gap: 30px;
+}
+
+.mapaeemail a {
+    display: flex;
+    align-items: center;
+}
+
+.mapaeemail img {
+    width: 30px; 
+    height: 30px;
+}
+/*============= Ajustes =============*/
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+       
+    }
+}
+
+/* Estilo do Menu Hambúrguer */
+.menu-toggle {
+    display: none; /* Esconde por padrão */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 4px;
+    background: var(--roxo);
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Para telas menores */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Mostra o menu hambúrguer */
+    }
+
+    .bottom-header {
+        display: none; /* Esconde o menu completo */
+    }
+}
+
+
+
+
+
+
+

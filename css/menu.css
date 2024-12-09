@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/*==============RESET===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    
+ul {
+    list-style: none;
+  }
+    
+a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 30px;
+  }
+    
+img {
+    width: 100%;
+    height: auto;
+  }
+
+/*============== rolagem suave ============== */
+
+html {
+  scroll-behavior: smooth;
+  background-color: blueviolet;
+  color: antiquewhite;
+}
+
