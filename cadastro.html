@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="icon" href="img/Logo1.png" type="image/png">
+</head>
+<body>
+    <header>
+        <a id="voltar" href="index.html">
+            <img src="img/Logo1.png" alt="Logo" id="logo">
+        </a>
+    </header>
+    <div class="container">
+        <form>
+            <h1 class="form-title">Cadastre-se aqui!</h1>
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" class="form-input" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="form-input" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" class="form-input" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit" class="form-button" onclick="confirmar()">Cadastre-se</button>
+        </form>
+        <a href="entre.html" class="form-link">Ou entre na sua conta</a>
+    </div>
+
+    <script>
+        function confirmar() {
+            event.preventDefault();
+            alert("Cadastro realizado com sucesso!");
+        }
+    </script>
+</body>
+</html>

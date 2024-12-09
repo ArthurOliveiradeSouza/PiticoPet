@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre</title>
+    <link rel="stylesheet" href="css/entre.css">
+    <link rel="icon" href="img/Logo1.png" type="image/png">
+</head>
+<body>
+    <header>
+        <a id="voltar" href="index.html">
+            <img src="img/Logo1.png" alt="Logo" id="logo">
+        </a>
+    </header>
+    <div class="container">
+        <form>
+            <h1 class="form-title">Entre na sua conta</h1>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="form-input" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" class="form-input" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit" class="form-button" onclick="confirmar()">Entrar</button>
+        </form>
+        <a href="cadastro.html" class="form-link">Ou crie a sua conta</a>
+    </div>
+
+    <script>
+        function confirmar() {
+            event.preventDefault();
+            alert("Login na conta realizado com sucesso!");
+        }
+    </script>
+</body>
+</html>
